@@ -1,0 +1,22 @@
+//SUBSEQUENCE
+#include <iostream>
+
+using namespace std;
+void helper(string s,string output){
+    if(s.empty()){
+        cout<<output<<" ";
+        return;
+    }
+    helper(s.substr(1),output+s[0]);
+    helper(s.substr(1),output);
+}
+int main()
+{
+
+    string s="gfg";
+    string output="";
+    helper(s,output);
+    return 0;
+}
+/////////////////////////
+gfg gf gg g fg f g
